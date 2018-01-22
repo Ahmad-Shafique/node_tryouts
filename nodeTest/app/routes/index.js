@@ -2,7 +2,7 @@
 
 const noteRoutes = require('./note_routes');
 
-module.exports = function(app,db) => {
+module.exports = function(app,db)  {
 	noteRoutes(app,db);
 	// Space for future route groups
 };
