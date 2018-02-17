@@ -8,8 +8,11 @@ const app = express();
 
 const port = 10000;
 
-require('./app/routes')(app,{});
+app.use(bodyParser.urlencoded({extended: true}) );
+
+require('./app/routes/index')(app,{});
 
 app.listen(port, () => {
     console.log('live on port ' + port);
 });
+
