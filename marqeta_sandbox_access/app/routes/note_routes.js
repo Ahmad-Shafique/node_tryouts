@@ -15,7 +15,7 @@ module.exports = function(app, db) {
         res.send( 'Testing Post Success');
     });
 
-    app.get('/createCardProduct', (req,res) => {
+    app.post('/createCardProduct', (req,res) => {
         //res.send("Card product creation api");
 
         // request('http://www.google.com',function(error,response,body){
