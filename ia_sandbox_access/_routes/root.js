@@ -1,3 +1,4 @@
+var creds = require('../authentication/dbCredentials');
 
 
 const userRoutes = require('./users');
@@ -23,9 +24,9 @@ module.exports = function(app,db){
 
     app.get('/test-mysql', (req,res) => {
         var connection = db.createConnection({
-            host:'localhost',
-            user:'root',
-            database: 'ia'
+            'host':'localhost',
+            'user':'root',
+            'database': 'ia'
         });
 
         connection.connect(function(err){
