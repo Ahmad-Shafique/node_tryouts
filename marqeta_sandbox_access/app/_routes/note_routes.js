@@ -5,6 +5,12 @@ const fs= require('fs');
 const request = require('request');
 
 module.exports = function(app, db) {
+
+    app.post('/t',(req,res) => {
+        console.log(req.body);
+        res.send(req.body["1"] + " " + req.body["2"]);
+    })
+
     app.get('/testGet', (req,res) => {
         console.log(req.body);
         res.send( 'Testing get function');
